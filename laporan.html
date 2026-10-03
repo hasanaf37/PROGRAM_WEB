@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Laporan - SITTA UT</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <h1>SITTA UT</h1>
+        <h2>Laporan</h2>
+
+        <a href="dashboard.html"> Kembali ke Dashboard </a>
+      </header>
+
+      <!-- Monitoring Progress DO -->
+      <section>
+        <h2>Monitoring Progress DO Bahan Ajar</h2>
+
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Nomor DO</th>
+              <th>Nama</th>
+              <th>Status</th>
+              <th>Ekspedisi</th>
+              <th>Tanggal Kirim</th>
+            </tr>
+          </thead>
+
+          <tbody id="tabelMonitoring"></tbody>
+        </table>
+      </section>
+
+      <!-- Rekap Bahan Ajar -->
+      <section>
+        <h2>Rekap Bahan Ajar</h2>
+
+        <div id="ringkasanStok"></div>
+
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Kode Barang</th>
+              <th>Nama Bahan Ajar</th>
+              <th>Jenis</th>
+              <th>Edisi</th>
+              <th>Stok</th>
+            </tr>
+          </thead>
+
+          <tbody id="tabelRekap"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/laporan.js"></script>
+  </body>
+</html>

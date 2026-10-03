@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Informasi Bahan Ajar - SITTA UT</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <h1>SITTA UT</h1>
+        <h2>Informasi Bahan Ajar</h2>
+
+        <a href="dashboard.html"> Kembali ke Dashboard </a>
+      </header>
+
+      <section>
+        <h2>Daftar Bahan Ajar</h2>
+
+        <div>
+          <label for="inputCari">Cari Bahan Ajar:</label>
+
+          <input
+            type="text"
+            id="inputCari"
+            placeholder="Cari nama atau kode barang..."
+          />
+        </div>
+        <div class="form-tambah-stok">
+          <h3>Tambah Bahan Ajar</h3>
+
+          <label for="coverBaru">Cover</label>
+          <input
+            type="text"
+            id="coverBaru"
+            placeholder="Contoh: img/bahan_ajar.jpg"
+          />
+
+          <label for="kodeLokasiBaru">Kode Lokasi</label>
+          <input type="text" id="kodeLokasiBaru" placeholder="Contoh: 0JKT01" />
+
+          <label for="kodeBarangBaru">Kode Barang</label>
+          <input
+            type="text"
+            id="kodeBarangBaru"
+            placeholder="Contoh: EKMA4500"
+          />
+
+          <label for="namaBarangBaru">Nama Bahan Ajar</label>
+          <input
+            type="text"
+            id="namaBarangBaru"
+            placeholder="Masukkan nama bahan ajar"
+          />
+
+          <label for="jenisBarangBaru">Jenis</label>
+          <input type="text" id="jenisBarangBaru" placeholder="Contoh: BMP" />
+
+          <label for="edisiBaru">Edisi</label>
+          <input type="text" id="edisiBaru" placeholder="Contoh: 1" />
+
+          <label for="stokBaru">Stok</label>
+          <input
+            type="number"
+            id="stokBaru"
+            placeholder="Masukkan jumlah stok"
+            min="1"
+          />
+
+          <button type="button" id="btnTambahStok">Tambah Bahan Ajar</button>
+        </div>
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Cover</th>
+              <th>Kode Lokasi</th>
+              <th>Kode Barang</th>
+              <th>Nama Bahan Ajar</th>
+              <th>Jenis</th>
+              <th>Edisi</th>
+              <th>Stok</th>
+            </tr>
+          </thead>
+
+          <tbody id="tabelBahanAjar"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/stok.js"></script>
+  </body>
+</html>

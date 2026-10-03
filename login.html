@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Login - SITTA UT</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <main class="login-container">
+      <section class="login-card">
+        <!-- Header Login -->
+        <header class="login-header">
+          <h1>SITTA UT</h1>
+          <p>Sistem Informasi Bahan Ajar</p>
+        </header>
+
+        <!-- Form Login -->
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="email">Email</label>
+
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Masukkan email"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Masukkan password"
+              required
+            />
+          </div>
+
+          <button type="submit" id="btnLogin">Login</button>
+        </form>
+
+        <!-- Link Tambahan -->
+        <div class="login-links">
+          <button type="button" id="btnLupaPassword">Lupa Password</button>
+
+          <button type="button" id="btnDaftar">Daftar</button>
+        </div>
+      </section>
+    </main>
+    <script src="js/data.js"></script>
+    <script src="js/login.js"></script>
+  </body>
+</html>

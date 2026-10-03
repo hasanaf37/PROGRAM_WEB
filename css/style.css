@@ -1,0 +1,787 @@
+/* Root */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #1f2937;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(37, 99, 235, 0.1),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(14, 165, 233, 0.08),
+      transparent 30%
+    ),
+    #f4f7fb;
+
+  min-height: 100vh;
+}
+/* main container */
+main {
+  width: 92%;
+  max-width: 1200px;
+  margin: 35px auto;
+}
+/* Header */
+header {
+  position: relative;
+
+  background: linear-gradient(135deg, #0f172a, #1e3a8a);
+
+  color: white;
+
+  padding: 28px 32px;
+  margin-bottom: 24px;
+
+  border-radius: 18px;
+
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.18);
+
+  overflow: hidden;
+}
+
+header::after {
+  content: "";
+
+  position: absolute;
+
+  width: 220px;
+  height: 220px;
+
+  right: -80px;
+  top: -100px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+}
+
+header h1 {
+  margin: 0;
+
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+header h2 {
+  margin: 8px 0;
+
+  font-size: 20px;
+  font-weight: 500;
+}
+
+header p {
+  margin: 5px 0;
+  color: #dbeafe;
+}
+/* link dalam header */
+header a {
+  display: inline-block;
+
+  margin-top: 12px;
+
+  padding: 9px 15px;
+
+  color: white;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  transition: 0.3s;
+}
+
+header a:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.18);
+  text-decoration: none;
+}
+/* Section card */
+section {
+  background: rgba(255, 255, 255, 0.96);
+
+  padding: 26px;
+
+  margin-bottom: 24px;
+
+  border-radius: 18px;
+
+  border: 1px solid rgba(226, 232, 240, 0.9);
+
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.07);
+
+  transition: 0.3s;
+}
+
+section:hover {
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.1);
+}
+
+section h2 {
+  margin-top: 0;
+
+  color: #0f172a;
+
+  font-size: 21px;
+}
+
+section h3 {
+  color: #1e3a8a;
+}
+/* Form */
+.form-group {
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  color: #334155;
+}
+
+input {
+  width: 100%;
+  max-width: 520px;
+
+  padding: 12px 14px;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 10px;
+
+  background: #f8fafc;
+
+  color: #1f2937;
+
+  font-size: 14px;
+
+  transition: 0.25s;
+}
+
+input::placeholder {
+  color: #94a3b8;
+}
+
+input:hover {
+  border-color: #93c5fd;
+}
+
+input:focus {
+  outline: none;
+
+  background: white;
+
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+/* button */
+button {
+  padding: 11px 20px;
+
+  margin: 5px auto;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+
+  color: white;
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  box-shadow: 0 6px 15px rgba(37, 99, 235, 0.22);
+
+  transition: all 0.25s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 9px 20px rgba(37, 99, 235, 0.3);
+}
+
+button:active {
+  transform: translateY(0);
+}
+/* Login Page */
+.login-container {
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 25px;
+
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(59, 130, 246, 0.18),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(14, 165, 233, 0.15),
+      transparent 30%
+    ),
+    linear-gradient(135deg, #eef6ff, #f8fbff);
+}
+
+.login-card {
+  width: 100%;
+  max-width: 430px;
+
+  padding: 40px;
+
+  background: rgba(255, 255, 255, 0.98);
+
+  border-radius: 22px;
+
+  border: 1px solid #dbeafe;
+
+  box-shadow: 0 20px 50px rgba(30, 64, 175, 0.12);
+
+  animation: loginAppear 0.6s ease;
+}
+
+@keyframes loginAppear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-header {
+  text-align: center;
+
+  margin-bottom: 30px;
+}
+
+.login-header h1 {
+  margin: 0;
+
+  font-size: 34px;
+
+  font-weight: 900;
+
+  color: #e1e3ec;
+
+  letter-spacing: 1px;
+}
+
+.login-header p {
+  margin-top: 8px;
+
+  color: #cfd5dd;
+
+  font-size: 14px;
+}
+
+.login-card form button {
+  width: 100%;
+
+  margin-top: 5px;
+
+  padding: 13px;
+}
+
+.login-links {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-top: 18px;
+
+  padding-top: 15px;
+
+  border-top: 1px solid #e5e7eb;
+}
+
+.login-links button {
+  background: transparent;
+
+  color: #2563eb;
+
+  box-shadow: none;
+
+  padding: 5px;
+}
+
+.login-links button:hover {
+  transform: none;
+
+  text-decoration: underline;
+
+  box-shadow: none;
+}
+/* Dasboard */
+/* =========================================================
+   9. DASHBOARD MENU
+   ========================================================= */
+
+.dashboard-menu {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 18px;
+
+  margin-bottom: 24px;
+}
+
+.dashboard-menu a {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  min-height: 100px;
+
+  padding: 24px;
+
+  border-radius: 16px;
+
+  color: #1e293b;
+
+  background: linear-gradient(135deg, #ffffff, #f8fafc);
+
+  border: 1px solid #e2e8f0;
+
+  box-shadow: 0 7px 20px rgba(15, 23, 42, 0.06);
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  overflow: hidden;
+
+  transition: all 0.3s;
+}
+
+.dashboard-menu a::before {
+  content: "";
+
+  width: 5px;
+
+  height: 55px;
+
+  position: absolute;
+
+  left: 0;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  border-radius: 0 5px 5px 0;
+
+  background: #2563eb;
+}
+
+.dashboard-menu a:hover {
+  transform: translateY(-5px);
+
+  color: #1d4ed8;
+
+  border-color: #bfdbfe;
+
+  box-shadow: 0 15px 30px rgba(37, 99, 235, 0.13);
+
+  text-decoration: none;
+}
+/* =========================================================
+   10. TABLE
+   ========================================================= */
+
+table {
+  width: 100%;
+
+  border-collapse: separate;
+
+  border-spacing: 0;
+
+  margin-top: 18px;
+
+  overflow: hidden;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 12px;
+
+  background: white;
+}
+
+th,
+td {
+  padding: 13px 14px;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  text-align: left;
+
+  font-size: 14px;
+}
+
+th {
+  background: linear-gradient(135deg, #0f172a, #1e3a8a);
+
+  color: white;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tbody tr {
+  transition: 0.2s;
+}
+
+tbody tr:hover {
+  background-color: #eff6ff;
+
+  transform: scale(1.002);
+}
+
+/* =========================================================
+   11. COVER BAHAN AJAR
+   ========================================================= */
+
+td img {
+  display: block;
+
+  width: 65px;
+
+  height: 85px;
+
+  object-fit: cover;
+
+  border-radius: 8px;
+
+  border: 1px solid #e2e8f0;
+
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.12);
+
+  transition: 0.3s;
+}
+
+td img:hover {
+  transform: scale(1.08);
+
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.18);
+}
+
+/* =========================================================
+   12. STATUS PENGIRIMAN
+   ========================================================= */
+
+.status-pengiriman {
+  display: inline-block;
+
+  padding: 6px 12px;
+
+  border-radius: 20px;
+
+  background: #dbeafe;
+
+  color: #1d4ed8;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  border: 1px solid #bfdbfe;
+}
+
+/* =========================================================
+   13. TRACKING TIMELINE
+   ========================================================= */
+
+#perjalananTracking {
+  margin-top: 25px;
+
+  margin-left: 10px;
+
+  padding-left: 30px;
+
+  border-left: 3px solid #bfdbfe;
+}
+
+.tracking-item {
+  position: relative;
+
+  margin-bottom: 25px;
+
+  padding-left: 20px;
+}
+
+.tracking-dot {
+  position: absolute;
+
+  left: -40px;
+
+  top: 3px;
+
+  width: 17px;
+
+  height: 17px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(135deg, #2563eb, #0ea5e9);
+
+  border: 3px solid white;
+
+  box-shadow:
+    0 0 0 3px #bfdbfe,
+    0 5px 12px rgba(37, 99, 235, 0.25);
+}
+
+.tracking-content {
+  background: linear-gradient(135deg, #f8fafc, #eff6ff);
+
+  padding: 17px;
+
+  border-radius: 12px;
+
+  border: 1px solid #dbeafe;
+
+  box-shadow: 0 5px 15px rgba(15, 23, 42, 0.05);
+}
+
+.tracking-content strong {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #1e3a8a;
+}
+
+.tracking-content p {
+  margin: 0;
+
+  color: #475569;
+
+  line-height: 1.6;
+}
+
+/* =========================================================
+   14. FORM TAMBAH BAHAN AJAR
+   ========================================================= */
+
+.form-tambah-stok {
+  margin-top: 25px;
+
+  padding: 24px;
+
+  border-radius: 15px;
+
+  background: linear-gradient(135deg, #f8fafc, #eff6ff);
+
+  border: 1px solid #dbeafe;
+}
+
+.form-tambah-stok h3 {
+  margin-top: 0;
+
+  margin-bottom: 20px;
+
+  color: #1e3a8a;
+}
+
+.form-tambah-stok label {
+  margin-top: 12px;
+}
+
+.form-tambah-stok input {
+  margin-bottom: 5px;
+}
+
+.form-tambah-stok button {
+  margin-top: 15px;
+}
+
+/* =========================================================
+   15. RINGKASAN STOK
+   ========================================================= */
+
+#ringkasanStok {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 15px;
+
+  margin: 15px 0;
+}
+
+#ringkasanStok p {
+  margin: 0;
+
+  padding: 18px;
+
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, #eff6ff, #ffffff);
+
+  border: 1px solid #dbeafe;
+
+  color: #334155;
+}
+
+#ringkasanStok strong {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #1e3a8a;
+}
+
+/* =========================================================
+   16. SEARCH
+   ========================================================= */
+
+#inputCari {
+  max-width: 600px;
+
+  margin-bottom: 5px;
+}
+
+/* =========================================================
+   17. RESPONSIVE TABLE
+   ========================================================= */
+
+@media (max-width: 850px) {
+  table {
+    display: block;
+
+    overflow-x: auto;
+
+    white-space: nowrap;
+  }
+}
+
+/* =========================================================
+   18. RESPONSIVE MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+  main {
+    width: 94%;
+
+    margin: 18px auto;
+  }
+
+  header {
+    padding: 22px;
+
+    border-radius: 15px;
+  }
+
+  header h1 {
+    font-size: 25px;
+  }
+
+  header h2 {
+    font-size: 17px;
+  }
+
+  section {
+    padding: 20px;
+
+    border-radius: 15px;
+  }
+
+  .dashboard-menu {
+    grid-template-columns: 1fr;
+  }
+
+  #ringkasanStok {
+    grid-template-columns: 1fr;
+  }
+
+  .login-card {
+    padding: 28px 22px;
+
+    border-radius: 18px;
+  }
+
+  .login-header h1 {
+    font-size: 29px;
+  }
+}
+
+/* =========================================================
+   19. SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 450px) {
+  main {
+    width: 96%;
+  }
+
+  header {
+    padding: 18px;
+  }
+
+  section {
+    padding: 16px;
+  }
+
+  .login-container {
+    padding: 15px;
+  }
+
+  .login-card {
+    padding: 24px 18px;
+  }
+
+  .login-links {
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 5px;
+  }
+
+  button {
+    width: 100%;
+  }
+}

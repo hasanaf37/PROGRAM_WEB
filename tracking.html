@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Tracking Pengiriman - SITTA UT</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <h1>SITTA UT</h1>
+        <h2>Tracking Pengiriman</h2>
+
+        <a href="dashboard.html"> Kembali ke Dashboard </a>
+      </header>
+
+      <section>
+        <h2>Cek Pengiriman</h2>
+
+        <form id="trackingForm">
+          <label for="nomorDO"> Nomor Delivery Order (DO) </label>
+
+          <input
+            type="text"
+            id="nomorDO"
+            placeholder="Masukkan nomor DO"
+            required
+          />
+
+          <button type="submit">Lacak Pengiriman</button>
+        </form>
+      </section>
+
+      <section id="hasilTracking"></section>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/tracking.js"></script>
+  </body>
+</html>

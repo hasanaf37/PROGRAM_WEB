@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Histori Transaksi - SITTA UT</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <h1>SITTA UT</h1>
+        <h2>Histori Transaksi Bahan Ajar</h2>
+
+        <a href="dashboard.html"> Kembali ke Dashboard </a>
+      </header>
+
+      <section>
+        <h2>Histori Transaksi</h2>
+
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Nomor DO</th>
+              <th>Nama</th>
+              <th>Paket</th>
+              <th>Ekspedisi</th>
+              <th>Tanggal Kirim</th>
+              <th>Total</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+
+          <tbody id="tabelHistori"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/histori.js"></script>
+  </body>
+</html>
